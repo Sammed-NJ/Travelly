@@ -1,0 +1,342 @@
+/*font-family: 'Shadows Into Light Two', cursive;
+font-family: 'Jost', sans-serif;*/
+
+/* Global styles */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+h1 {
+    color: white;
+    font-family: 'Shadows Into Light Two', cursive;
+    font-size: 2.6rem;
+}
+
+li,
+button,
+label,
+input,
+p {
+    font-family: 'Jost', sans-serif;
+    font-size: 2rem;
+}
+
+h2 {
+    font-family: 'Jost', sans-serif;
+    font-size: 4.8rem;
+}
+
+h3 {
+    font-family: 'Jost', sans-serif;
+    font-size: 3rem;
+    font-weight: 400;
+}
+
+h4,
+h5 {
+    font-family: 'Jost', sans-serif;
+    font-size: 2,8rem;
+}
+
+a {
+    font-family: 'Jost', sans-serif;
+    color: white;
+    text-decoration: none;
+}
+
+/* Global styles */
+
+/* Nav section with HERO */
+
+.main-head {
+    background-color: #131c27;
+    color: white;
+    position: sticky;
+    top: 0%;
+    z-index: 2;
+}
+
+nav {
+     min-height: 10vh;
+     display: flex;
+     width: 90%;
+     margin: auto;
+     padding: 2rem;
+     align-items: center;
+     flex-wrap: wrap;
+}
+
+nav ul {
+     display: flex;
+     flex: 1 1 40rem;
+     justify-content: space-around;
+     align-items: center;
+     list-style: none;
+}
+
+#logo {
+     flex: 4 1 40rem;
+}
+
+.main-head a:hover {
+    border-bottom: 1px solid white;
+}
+
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), transparent), url("/img/landing-page.jpg");
+    background-repeat: no-repeat;
+    min-height: 90vh;
+    background-size: cover;
+    background-position: center center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero h3 {
+    padding: 5rem;
+}
+
+button {
+    padding: 2rem 6rem;
+    background-color: #4c6e97;
+    border: none;
+    cursor: pointer;
+    color: white;
+    font-weight: 500;
+    transition: background .2s ease-in-out;
+}
+button:hover {
+    background-color: #374f6b;
+}
+
+
+/* Locations SECTION */
+
+#locations {
+    min-height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), transparent), url("/img/new-york-page.png");
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.locations-head {
+    width: 90%;
+    margin: auto;
+}
+
+.locations-head h2, h3 {
+    padding: 1rem 0rem;
+}
+
+.cloud {
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    opacity: .9;
+    pointer-events: none;
+}
+
+.moving-cloud-1 {
+    animation: cloudsanimations 2.5s  infinite alternate ease-in-out;
+}
+
+.moving-cloud-2 {
+    opacity: .5;
+    z-index: -1;
+    top: 15%;
+    animation: cloudsanimations 4s  infinite alternate ease-in-out;
+}
+
+@keyframes cloudsanimations {
+
+    from {
+        transform: translate(2%, -2%);
+    }
+    to {
+        transform: translate(0%, 0%);
+    }
+
+}
+/* BENEFIT SECTION */
+
+.benefits-head {
+    background: #202e3f;
+    padding: 3rem;
+    min-height: 30vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.benefits-head h3 {
+    padding: 1rem;
+}
+
+.cards {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    min-height: 70vh;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.card {
+    flex: 1 1 30rem;
+    min-height: 40vh;
+    margin: 2rem 5rem;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1), 0px 20px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}    
+
+.cards img {
+    max-width: 20%;
+    padding: 1rem;
+}
+
+.card h4 {
+    font-size: 3rem;
+}
+
+.card h4,
+.card p {
+        padding: 1rem;
+}
+
+.card-icon {
+    background-color: #4c6e97;
+}
+
+
+#contact {
+    min-height: 90vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), transparent), url("/img/contact-mountain.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-wrapper {
+    background-color: #131c27d3;
+    width: 60%;
+    color: white;
+    border-radius: 10px;
+}
+
+.form-head {
+    text-align: center;
+    padding: 4rem;
+}
+
+.name-form,
+.email-form {
+    padding: 3rem;
+    text-align: center;
+}
+
+.form-wrapper label {
+    margin: 0rem 3rem;
+}
+
+.form-wrapper button {
+    width: 100%;
+    padding: 2rem;
+    margin-top: 8rem;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+
+.form-wrapper input {
+    padding: 1rem 20rem 1rem 1rem;
+}
+
+footer {
+    color: white;
+    background-color: #131c27;
+}
+
+.footer-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: auto;
+    align-items: center;
+    min-height: 10vh;
+}
+
+footer h5 {
+    padding: 1rem;
+    font-size: 1.5rem;
+}
+
+footer ul {
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
+}
+
+footer ul li {
+    margin: 20%;
+}
+
+button:focus {
+    outline: none;
+    background-color: #374f6b;
+}
+
+/* MEDIA QUARI */
+
+@media screen and (max-width: 950px) {
+
+    html {
+        font-size: 42%;
+    }
+    nav {
+        text-align: center;
+    }
+
+    #logo {
+        padding: 1rem;
+    }
+    .cloud {
+        height: 50rem;
+    }
+    .moving-cloud-2 {
+        right: -10%;
+        top: 10%;
+        z-index: -1;
+    }
+    .locations-head h3 {
+        background-color: #131c27d3;
+        color: white;
+        padding: 2rem;
+    }
+
+    .form-wrapper input {
+        padding: .5rem 1rem .5rem .5rem;
+    }
+}
+
